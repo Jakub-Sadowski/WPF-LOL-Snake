@@ -1,0 +1,93 @@
+﻿<Window x:Class="WPFsnejk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFsnejk"
+        mc:Ignorable="d"
+        Title="Snake!" Height="447" Width="650" ResizeMode="NoResize" Closing="Window_Closing" Name="mainWindow">
+    <Grid Background="#FFABE6EC">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="251*"/>
+        </Grid.RowDefinitions>-->
+
+        <TabControl BorderBrush="Gainsboro" Background="Aqua" Grid.RowSpan="2">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="Menu główne" Background="{x:Null}">
+                <Grid Margin="10,75,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="202*"/>
+                        <RowDefinition Height="95*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Name="radios" Margin="175,30,175,129">
+                        <StackPanel Orientation="Horizontal" >
+                            <RadioButton IsChecked="True" x:Name="ez" Content="Easy" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.984,-0.511"/>
+                            <RadioButton x:Name="md"  Content="Medium" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.984,-0.511"/>
+                            <RadioButton x:Name="hd"  Content="Hard" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.984,-0.511"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <Button Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Width="268" Click="startButton" Height="44" Margin="175,109,175,61" FontSize="24" />
+                    <Button Content="Exit" VerticalAlignment="Center" Click="exitButton" Height="24" HorizontalAlignment="Center" Margin="538,186,0,99" Grid.RowSpan="2" Background="#FFE85A5A" Width="80"/>
+                    <CheckBox Checked="music_CheckedChanged" Unchecked="music_CheckedChanged" IsChecked="True" Name="Music" Margin="10,193,533,0" FontSize="10" MinHeight="20">
+                        <TextBlock>
+				            Music
+                        </TextBlock>
+                    </CheckBox>
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="Tabela Wyników">
+                <Grid>
+                    <TextBlock FontFamily="Comic Sans MS Bold" FontSize="17" Margin="161,78,61,178">Besssst Results</TextBlock>
+                    <TextBlock FontSize="15.4" Margin="145,108,192,163">1.<LineBreak/>2.<LineBreak/>3.<LineBreak/>4.<LineBreak/>5.<LineBreak/></TextBlock>
+                    <ListBox Name="resultList" Margin="161,108,259,163" Background="#FFC6FBC1">
+
+                    </ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Informacje">
+                <Grid>
+                    <TextBlock  FontSize="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        Twórcy: Arcisz Piotr, Sadowski Jakub <LineBreak/>
+                    </TextBlock>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Image Source="D:\pobrane\WPFsnejk\WPFsnejk\Resources\Images\grass1.png" Margin="0,308,0,-15" />
+        <Image Source="D:\pobrane\WPFsnejk\WPFsnejk\Resources\Images\cloud.png" Margin="470,25,0.2,224.6"/>
+        <Image Source="D:\pobrane\WPFsnejk\WPFsnejk\Resources\Images\snake12.png" Margin="41,164,420.2,68.6" RenderTransformOrigin="0.551,0.8"/>
+       
+
+    </Grid>
+</Window>

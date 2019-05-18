@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPFsnejk.pauseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFsnejk"
+        mc:Ignorable="d"
+        Title="pauseWindow" Height="450" Width="650" Name="pauseWin">
+    <Grid Background="AliceBlue">
+        <Image Source="D:\pobrane\WPFsnejk\WPFsnejk\Resources\Images\snake13.png" Margin="-10,-114,0.2,-52"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Resume Game"  Width="125" Click="resume_Game" Margin="0,0,0,10"/>
+            <Button Content="Go to Main Menu"  Width="125" Click="restart_Game" Margin="0,10"/>
+            <Button Content="Exit Game" Width="125" Click="quit_Game" Margin="0,10"/>
+        </StackPanel>
+        <Image Source="D:\pobrane\WPFsnejk\WPFsnejk\Resources\Images\grass1.png" Margin="0,308,0,-15" />
+    </Grid>
+</Window>
